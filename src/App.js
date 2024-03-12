@@ -13,7 +13,7 @@
 // export default App;
 import { useEffect, useState } from "react";
 // import WeatherApp from './functionality/WeatherApp';
-import "./styles.css";
+import "./index.css";
 import axios from "axios";
 
 const Searchbar = ({ onSearch }) => {

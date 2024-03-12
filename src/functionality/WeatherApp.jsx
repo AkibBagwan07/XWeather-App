@@ -29,7 +29,7 @@ const WeatherApp = () => {
  },[search,api])
 
     return (
-    <div>
+    <div className='weather-card'>
     <form onSubmit={(e)=>{
         e.preventDefault()
          setSearch(e.target.inp.value)

@@ -22,7 +22,7 @@ const Searchbar = ({ onSearch }) => {
     onSearch(city);
   };
   return (
-    <div>
+    <div className="weather-card">
       <input
         type="text"
         value={city}

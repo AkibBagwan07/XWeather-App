@@ -47,6 +47,10 @@ body {
   color: white;
 }
 
+.weather-card{
+  
+}
+
 .flex {
   display: flex;
   align-items: center;

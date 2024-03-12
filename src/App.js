@@ -65,7 +65,7 @@ const WeatherDisplay = ({ city }) => {
   }, [city]);
   return (
     <div>
-      {loading && <p>Loading data…</p>}
+      {loading && <p>Loading data...</p>}
       {!loading && weatherData && (
         <div className="weather-cards">
           <div className="flexChild">

@@ -30,6 +30,10 @@ body {
   background-color: lightblue;
 }
 
+.inpBtnParent{
+  display: flex;
+}
+
 .inp {
   width: 400px;
   height: 50px;
@@ -47,7 +51,7 @@ body {
   color: white;
 }
 
-.weather-cards {
+.weather-card {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,7 +59,7 @@ body {
   flex-wrap: wrap;
 }
 
-.flexChild {
+.weather-cards {
   display: flex;
   flex-direction: column;
   justify-content: center;

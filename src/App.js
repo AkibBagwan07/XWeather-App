@@ -22,7 +22,7 @@ const Searchbar = ({ onSearch }) => {
     onSearch(city);
   };
   return (
-    <div className="weather-card">
+    <div className="inpBtnParent">
       <input
         type="text"
         value={city}
@@ -39,7 +39,7 @@ const Searchbar = ({ onSearch }) => {
 
   const WeatherCard = ({data,title}) =>{
     return(
-      <div className="flexChild">
+      <div className="weather-cards">
         <h3>{title}</h3>
         <p>{data}</p>
       </div>
@@ -76,11 +76,19 @@ const WeatherDisplay = ({ city }) => {
     <div>
       {loading && <p>Loading data...</p>}
       {!loading && weatherData && (
-        <div className="weather-cards">
+        <div className="weather-card">
+          <div>
         <WeatherCard data={`${weatherData.temp_c}°C`} title="Temperature"/>
+        </div>
+        <div>
         <WeatherCard data={`${weatherData.humidity}%`} title="Humidity"/>
+        </div>
+        <div>
         <WeatherCard data={`${weatherData.condition.text}`} title="Condition"/>
+        </div>
+        <div>
         <WeatherCard data={`${weatherData.wind_kph} kph`} title="Wind Speed"/>
+        </div>
       </div>
       )}
     </div>

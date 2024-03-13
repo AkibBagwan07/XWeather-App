@@ -37,6 +37,15 @@ const Searchbar = ({ onSearch }) => {
   );
 };
 
+  const WeatherCard = ({data,title}) =>{
+    return(
+      <div className="flexChild">
+        <h3>{title}</h3>
+        <p>{data}</p>
+      </div>
+    )
+  }
+
 const WeatherDisplay = ({ city }) => {
   const [weatherData, setWeatherData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -68,23 +77,11 @@ const WeatherDisplay = ({ city }) => {
       {loading && <p>Loading data...</p>}
       {!loading && weatherData && (
         <div className="weather-cards">
-          <div className="flexChild">
-            <h3>Temperature</h3>
-            <p>{weatherData.gust_kph}</p>
-          </div>
-          <div className="flexChild">
-            <h3>Humidity</h3>
-            <p>{weatherData.humidity}</p>
-          </div>
-          <div className="flexChild">
-            <h3>Condition</h3>
-            <p>{weatherData?.condition?.text}</p>
-          </div>
-          <div className="flexChild">
-            <h3>Wind Speed</h3>
-            <p>{weatherData.wind_kph}</p>
-          </div>
-        </div>
+        <WeatherCard data={`${weatherData.temp_c}°C`} title="Temperature"/>
+        <WeatherCard data={`${weatherData.humidity}%`} title="Humidity"/>
+        <WeatherCard data={`${weatherData.condition.text}`} title="Condition"/>
+        <WeatherCard data={`${weatherData.wind_kph} kph`} title="Wind Speed"/>
+      </div>
       )}
     </div>
   );

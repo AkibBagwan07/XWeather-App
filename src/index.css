@@ -51,7 +51,7 @@ body {
   color: white;
 }
 
-.weather-card {
+.weather-cards {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,10 +59,11 @@ body {
   flex-wrap: wrap;
 }
 
-.weather-cards {
+.weather-card {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   border-radius: 10px;
   height: 100px;
   margin-right: 30px;
